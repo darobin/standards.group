@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} ▶ standards.group</title>
+    <link rel="stylesheet" href="/css/sg.css">
+    <link rel="icon" href="/img/favicon.png">
+  </head>
+  <body class="{{  (tags or []) | join(' ')  }}">
+    <header>
+      <p><a href="/">Standards•Group</a></p>
+    </header>
+    <nav>
+      {% set nav = [
+          { label: 'Home', url: '/' }
+        ]
+      %}
+      <ul>
+        {% for entry in nav %}
+          <li>
+            {% if entry.url === page.url %}
+              {{ entry.label }}
+            {% else %}
+              <a href="{{ entry.url }}">{{ entry.label }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <header>
+          <h1>{{ title }}</h1>
+        </header>
+        {{ content | safe }}
+      </article>
+    </main>
+    <footer>
+      Made with 🪐 by the IPFS Foundation.
+    </footer>
+  </body>
+</html>
