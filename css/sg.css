@@ -1,0 +1,178 @@
+
+
+@import url(./colours.css);
+
+@font-face {
+  font-family: "Catamaran";
+  src: url("../fonts/Catamaran-VariableFont_wght.ttf");
+  font-style: normal;
+}
+@font-face {
+font-family: "Mulish";
+src: url("../fonts/Mulish-VariableFont_wght.ttf");
+font-style: normal;
+}
+@font-face {
+font-family: "Mulish";
+src: url("../fonts/Mulish-Italic-VariableFont_wght.ttf");
+font-style: italic;
+}
+
+:root {
+  /* colours as used */
+  --fg-colour: var(--dark-grey);
+  --bg-colour: var(--white);
+  --primary-colour: var(--deep-red);
+  --secondary-colour: var(--mid-orange);
+  /* sizes */
+  --content-width: 57rem;
+  --heading-family: Catamaran, sans-serif;
+  --body-family: Mulish, sans-serif;
+}
+
+*, *::after, *::before  {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  background: var(--bg-colour);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-family);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 300;
+  font-optical-sizing: auto;
+  color: var(--fg-colour);
+}
+
+body > header {
+  max-width: var(--content-width);
+  margin: 0 auto 5.5rem auto;
+}
+body > header p {
+  background: var(--fg-colour);
+  color: var(--bg-colour);
+  font-family: var(--heading-family);
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1rem 1rem 0.5rem 1rem;
+  line-height: 1;
+  margin: 0;
+}
+body > header a {
+  color: var(--background-colour);
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+main {
+  max-width: var(--content-width);
+  margin: 1rem auto 0 auto;
+  padding: 0 1rem 3rem 1rem;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+article > header {
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+h1 {
+  font-family: var(--heading-family);
+  font-weight: 700;
+  font-size: 3.75rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+article > header > .meta {
+  text-align: right;
+  font-style: italic;
+}
+article > img, article > a > img {
+  margin: 0 auto;
+  display: block;
+  background: var(--primary-colour);
+}
+article > p:last-child::after
+article > section:last-child > p:last-child::after {
+  content: " ∎";
+  color: var(--secondary-colour);
+}
+h2, h3 {
+  margin-bottom: 0;
+  font-family: var(--heading-family);
+}
+h2 + p, h3 + p {
+  margin-top: 0;
+}
+b, strong {
+  font-weight: bold;
+}
+
+a {
+  color: var(--primary-colour);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-thickness .2s;
+}
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+body p {
+  overflow-wrap: break-word;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 3px solid var(--secondary-colour);
+  margin-left: 0;
+  padding-left: 2rem;
+}
+
+article > hr {
+  border: 0;
+  margin-bottom: 4rem;
+}
+article > hr::after {
+  content: "⁂";
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--secondary-colour);
+}
+
+body > footer {
+  max-width: var(--content-width);
+    padding: 0 1rem 1rem 1rem;
+  margin: 0 auto;
+  text-align: right;
+}
+body > footer a {
+  text-decoration: none;
+}
+pre {
+  overflow-x: scroll;
+}
+
+@media only screen and (max-width:500px) {
+  body > header p {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
+}
