@@ -6,7 +6,8 @@ module.exports = function (cfg) {
   cfg.addPassthroughCopy("**/*.jpg");
   cfg.addPassthroughCopy("**/*.png");
   cfg.addPassthroughCopy("**/*.svg");
-  cfg.setServerPassthroughCopyBehavior("passthrough");
+  // add this back if things are slow, but it requires running build before committing
+  // cfg.setServerPassthroughCopyBehavior("passthrough");
   cfg.ignores.add("README.md");
   cfg.addCollection("wgsByTitle", function (collectionApi) {
     return collectionApi.getFilteredByTag('wg').sort(function (a, b) {
