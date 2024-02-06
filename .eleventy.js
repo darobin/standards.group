@@ -1,5 +1,8 @@
 
+const tasks = require("markdown-it-task-lists");
+
 module.exports = function (cfg) {
+  cfg.amendLibrary("md", mdLib => mdLib.use(tasks));
   cfg.addPassthroughCopy("img");
   cfg.addPassthroughCopy("css");
   cfg.addPassthroughCopy("fonts");
