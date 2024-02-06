@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} ▶ standards.group</title>
+    <title>{{ title }} — standards.group</title>
     <link rel="stylesheet" href="/css/sg.css">
     <link rel="icon" href="/img/favicon.png">
   </head>
   <body class="{{  (tags or []) | join(' ')  }}">
     <header>
-      <p><a href="/">Standards•Group</a></p>
+      <p>
+        <img src="/img/logo.svg" alt="Standards Group logo" wi>
+        <a href="/">Standards<span>/</span>Group</a>
+      </p>
     </header>
     <nav>
       {% set nav = [
@@ -18,9 +21,9 @@
       %}
       <ul>
         {% for entry in nav %}
-          <li>
+          <li class="{{ 'current' if entry.url === page.url else 'link' }}">
             {% if entry.url === page.url %}
-              {{ entry.label }}
+              <span class="current">{{ entry.label }}</span>
             {% else %}
               <a href="{{ entry.url }}">{{ entry.label }}</a>
             {% endif %}

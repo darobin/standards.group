@@ -1,7 +1,3 @@
 <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-  <rect width="12" height="60" fill="#ce0c28"/>
-  <rect width="12" height="60" fill="#ce4453" transform="translate(12, 0)"/>
-  <rect width="12" height="60" fill="#eeb525" transform="translate(24, 0)"/>
-  <rect width="12" height="60" fill="#ec6629" transform="translate(36, 0)"/>
-  <rect width="12" height="60" fill="#313131" transform="translate(48, 0)"/>
+  <rect width="60" height="60" fill="#fff" stroke="#313131" stroke-width="8"/>
 </svg>
