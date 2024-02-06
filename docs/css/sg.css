@@ -24,6 +24,7 @@ font-style: italic;
   --bg-colour: var(--white);
   --primary-colour: var(--deep-red);
   --secondary-colour: var(--mid-orange);
+  --highlights: var(--tarnished-gold);
   /* sizes */
   --content-width: 57rem;
   --heading-family: Catamaran, sans-serif;
@@ -74,8 +75,12 @@ body > header p img {
 body > header a {
   /* display: inline-block; */
   color: var(--bg-colour);
+  font-weight: inherit;
   text-decoration: none;
   pointer-events: auto;
+}
+body > header a:hover {
+  color: inherit;
 }
 body > header a > span {
   color: var(--secondary-colour);
@@ -110,7 +115,6 @@ main img {
   height: auto;
 }
 
-
 article > header {
   padding: 0;
   margin: 0 0 1rem 0;
@@ -126,6 +130,7 @@ h1 {
 article > header > .meta {
   text-align: right;
   font-style: italic;
+  font-size: 0.8rem;
 }
 article > img, article > a > img {
   margin: 0 auto;
@@ -150,13 +155,15 @@ b, strong {
 }
 
 a {
-  color: var(--primary-colour);
+  color: var(--secondary-colour);
+  font-weight: 400;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  transition: text-decoration-thickness .2s;
+  transition: all .2s;
 }
 a:hover {
   text-decoration-thickness: 3px;
+  color: var(--primary-colour);
 }
 
 body p {
@@ -194,6 +201,40 @@ body > footer a {
 }
 pre {
   overflow-x: scroll;
+}
+
+a.person-card {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.4rem;
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+}
+a.person-card img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+}
+a.person-card:hover {
+  /* background-color: var(--secondary-colour); */
+  color: var(--secondary-colour);
+  border-color: var(--secondary-colour);
+}
+
+.person-page {
+  display: flex;
+}
+.person-pic {
+  padding-right: 1rem;
+}
+.person-pic img {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
 }
 
 @media only screen and (max-width:500px) {

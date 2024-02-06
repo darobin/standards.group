@@ -1,6 +1,7 @@
 ---
 title: Welcome!
 layout: page.njk
+date: Last Modified
 tags:
   - home
 eleventyImport:

@@ -23,7 +23,7 @@
         {% for entry in nav %}
           <li class="{{ 'current' if entry.url === page.url else 'link' }}">
             {% if entry.url === page.url %}
-              <span class="current">{{ entry.label }}</span>
+              <span>{{ entry.label }}</span>
             {% else %}
               <a href="{{ entry.url }}">{{ entry.label }}</a>
             {% endif %}
@@ -35,8 +35,15 @@
       <article>
         <header>
           <h1>{{ title }}</h1>
+          {% if page.url !== "/" %}
+            <div class="meta">
+              updated <time datetime="{{ page.date.toISOString() }}">{% date %}</time>
+            </div>
+          {% endif %}
         </header>
-        {{ content | safe }}
+        {% block body %}
+          {{ content | safe }}
+        {% endblock %}
       </article>
     </main>
     <footer>
