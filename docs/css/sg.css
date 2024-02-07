@@ -91,6 +91,7 @@ body > nav {
   margin: 0 auto 5.5rem auto;
 }
 nav ul {
+  display: flex;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -103,6 +104,7 @@ nav li {
 }
 nav li.current {
   color: var(--secondary-colour);
+  cursor: default;
 }
 nav a {
   display: inline-block;
@@ -115,6 +117,12 @@ nav a:hover {
 }
 nav li:hover {
   background-color: var(--fg-colour);
+}
+nav li.current a:hover {
+  color: inherit;
+}
+nav li.current:hover {
+  background-color: inherit;
 }
 
 main {
