@@ -25,7 +25,6 @@ module.exports = function (cfg) {
     return `<a class="person-card" href="${p.url}">${img}${p.data.title}</a>`;
   });
   cfg.addShortcode('date', function () {
-    console.warn('date', this.page.date.toISOString());
     return this.page.date.toISOString().replace(/T.*/, '');
   });
   return {

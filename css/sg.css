@@ -148,10 +148,14 @@ h1 {
   margin: 0;
   padding: 0;
 }
-article > header > .meta {
+.meta {
   text-align: right;
   font-style: italic;
   font-size: 0.8rem;
+}
+.meta a {
+  font-style: normal;
+  text-decoration: none;
 }
 article > img, article > a > img {
   margin: 0 auto;

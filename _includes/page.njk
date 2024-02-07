@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noai, noimageai">
     <title>{{ title }} — standards.group</title>
     <link rel="stylesheet" href="/css/sg.css">
     <link rel="icon" href="/img/favicon.png">
@@ -32,20 +33,24 @@
         {% endfor %}
       </ul>
     </nav>
+    {% macro pageMeta() %}
+      <div class="meta">
+        updated <time datetime="{{ page.date.toISOString() }}">{% date %}</time>
+        ⋅
+        <a href="https://github.com/darobin/standards.group/blob/main/{{ page.inputPath | replace('./', '') }}" target="_blank">edit</a>
+      </div>
+    {% endmacro %}
     <main>
       <article>
         <header>
           <h1>{{ title }}</h1>
-          {% if page.url !== "/" %}
-            <div class="meta">
-              updated <time datetime="{{ page.date.toISOString() }}">{% date %}</time>
-            </div>
-          {% endif %}
+          {{ pageMeta() if page.url !== "/" }}
         </header>
         {% block body %}
           {{ content | safe }}
         {% endblock %}
-      </article>
+        {{ pageMeta() if page.url === "/" }}
+  </article>
     </main>
     <footer>
       Made with 🪐 by the IPFS Foundation.
