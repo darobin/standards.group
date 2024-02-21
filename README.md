@@ -67,3 +67,7 @@ Some notes:
 - As before, `layout`, `date`, and `tags` are best left as is.
 - `title` is the person's name and `description` describes them.
 - `pic` is an optional picture (which you also need to include).
+
+## Publishing
+
+Just push it to `main` and it'll go live.
