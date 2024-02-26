@@ -14,7 +14,7 @@ The page should autorefresh as you make edits.
 
 ### Groups
 
-Groups are under `wg`. To add a group (say, *The Scoobies*), create `wg/scoobies/index.md` and fill out
+Groups are under `wg`. To add a group (say, *The Scoobies*), create `wg/scoobies.md` and fill out
 the following:
 
 ```
@@ -48,7 +48,7 @@ You can add whatever section you wish: it's free-form Markdown. Looking at speci
 
 ### People
 
-You can add a person (here, Buffy) by creating `people/buffy/index.md` and filling it out thus:
+You can add a person (here, Buffy) by creating `people/buffy.md` and filling it out thus:
 
 ```
 ---

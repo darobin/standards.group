@@ -21,7 +21,7 @@ module.exports = function (cfg) {
   cfg.addShortcode('personCard', function (id) {
     const p = getPersonBySlug(this, id);
     if (!p) return `<div class="person-card">Person not found: "${id}"</div>`;
-    const img = p.data.pic ? `<img src="${p.url}${p.data.pic}" alt="Picture of ${p.data.title}"> ` : '';
+    const img = p.data.pic ? `<img src="/people/${p.data.pic}" alt="Picture of ${p.data.title}"> ` : '';
     return `<a class="person-card" href="${p.url}">${img}${p.data.title}</a>`;
   });
   cfg.addShortcode('date', function () {
