@@ -13,10 +13,31 @@ module.exports = function (cfg) {
   // add this back if things are slow, but it requires running build before committing
   // cfg.setServerPassthroughCopyBehavior("passthrough");
   cfg.ignores.add("README.md");
+  cfg.addCollection("groupsByTitle", function (collectionApi) {
+    return collectionApi
+      .getFilteredByTag('wg')
+      .sort(sortGroupByTitle)
+    ;
+  });
   cfg.addCollection("wgsByTitle", function (collectionApi) {
-    return collectionApi.getFilteredByTag('wg').sort(function (a, b) {
-      return (a.data.title || 'Untitled Group').localeCompare(b.data.title || 'Untitled Group');
-    });
+    return collectionApi
+      .getFilteredByTag('wg')
+      .filter(g => !g.data.tags?.find(t => t === 'ig' || t === 'adjacent'))
+      .sort(sortGroupByTitle)
+    ;
+  });
+  cfg.addCollection("igsByTitle", function (collectionApi) {
+    return collectionApi
+      .getFilteredByTag('ig')
+      .sort(sortGroupByTitle)
+    ;
+  });
+  cfg.addCollection("wgFriendsByTitle", function (collectionApi) {
+    return collectionApi
+      .getFilteredByTag('wg')
+      .filter(g => g.data.tags?.includes('adjacent'))
+      .sort(sortGroupByTitle)
+    ;
   });
   cfg.addShortcode('personCard', function (id) {
     const p = getPersonBySlug(this, id);
@@ -38,4 +59,8 @@ module.exports = function (cfg) {
 
 function getPersonBySlug (self, slug) {
   return self.ctx.collections.person.find(p => p.fileSlug === slug);
+}
+
+function sortGroupByTitle (a, b) {
+  return (a.data.title || 'Untitled Group').localeCompare(b.data.title || 'Untitled Group');
 }
