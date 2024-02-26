@@ -255,6 +255,7 @@ a.person-card:hover {
 }
 .person-pic {
   padding-right: 1rem;
+  min-width: 256px;
 }
 .person-pic img {
   width: 256px;
