@@ -2,7 +2,7 @@
 title: WNFS WG
 layout: page.njk
 date: Last Modified
-description: ""
+description: "A distributed file system."
 chair: expede
 tags:
   - wg
@@ -13,7 +13,7 @@ tags:
 
 ## Meetings
 
-tktk
+See https://github.com/wnfs-wg for discussions and monthly community calls.
 
 ## Chair
 

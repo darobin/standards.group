@@ -2,7 +2,7 @@
 title: Steering Committee
 layout: page.njk
 date: Last Modified
-description: ""
+description: "The Steering Committee's purpose is to ensure the IPFS project's success."
 chair: mosh
 tags:
   - wg
@@ -12,7 +12,8 @@ tags:
 
 ## Meetings
 
-tktk
+- Every 2 weeks
+- File issues at https://github.com/ipfs/steering-wg.
 
 ## Chair
 

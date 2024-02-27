@@ -2,7 +2,7 @@
 title: Events WG
 layout: page.njk
 date: Last Modified
-description: ""
+description: "The Events WG produces several major IPFS Community events each year."
 chair: yuni
 tags:
   - wg
@@ -12,7 +12,7 @@ tags:
 
 ## Meetings
 
-tktk
+- Various, depending on timing of events
 
 ## Chair
 

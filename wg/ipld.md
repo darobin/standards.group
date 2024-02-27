@@ -2,7 +2,7 @@
 title: IPLD WG
 layout: page.njk
 date: Last Modified
-description: ""
+description: "IPLD tooling and best practices, schema coordination, multiformats registry governance and IETF hardening."
 chair: vmx
 tags:
   - wg
@@ -13,7 +13,8 @@ tags:
 
 ## Meetings
 
-tktk
+- meetings on a sporadic/as-needed basis 
+- [notes](https://github.com/ipld/team-mgmt/tree/master/meeting-notes) 
 
 ## Chair
 

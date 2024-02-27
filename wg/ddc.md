@@ -12,7 +12,7 @@ tags:
 
 ## Meetings
 
-tktk
+Currently on hiatus.
 
 ## Chair
 

@@ -2,7 +2,7 @@
 title: UCAN WG
 layout: page.njk
 date: Last Modified
-description: ""
+description: "Decentralized Auth — User Controlled Authorization Networks"
 chair: expede
 tags:
   - wg
@@ -13,7 +13,7 @@ tags:
 
 ## Meetings
 
-tktk
+See details at https://github.com/ucan-wg/.
 
 ## Chair
 
