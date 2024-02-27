@@ -13,7 +13,7 @@ tags:
 ## Meetings
 
 - Every 2 weeks
-- File issues at https://github.com/ipfs/steering-wg.
+- [File issues](https://github.com/ipfs/steering-wg)
 
 ## Inaugural Setup
 
