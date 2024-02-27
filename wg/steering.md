@@ -3,7 +3,9 @@ title: Steering Committee
 layout: page.njk
 date: Last Modified
 description: "The Steering Committee's purpose is to ensure the IPFS project's success."
-chair: mosh
+chair:
+  - mosh
+  - robin
 tags:
   - wg
 ---
@@ -22,18 +24,19 @@ the IPFS project by the IPFS community. However, before that can happen we need 
 so as to define how the governance will work and to set up the infrastructure it needs. That is
 the first, provisional Steering Committee that is working to get itself out of power.
 
-The provisional Steering Committee has 7 seats, all of them appointed by fiat by community leaders.
-As of February 2024, four of these had been seated and we are actively working to seat the remaining
-three.
+The provisional Steering Committee has 3 seats, all of them appointed by fiat by community leaders.
 
-For institutional continuity, and in order to have staggered elections, three of those seats are for
-two-year terms (ending 2026-02-28) and the other four are one-year terms (ending 2025-02-28). If the
+For institutional continuity, and in order to have staggered elections, two of those seats are for
+two-year terms (ending 2026-02-28) and the other one for a one-year term (ending 2025-02-28). If the
 governance system we pick has term limits for the Steering Committee, the two-year terms will count
-towards the term limits but the one-year terms will not.
+towards the term limits but the one-year term will not.
 
 The first election for the Steering Committee will take place after one year (in early 2025). That election 
-will replace (or reseat) the one-year terms. The second election will take place the follow year for
+will replace (or reseat) the one-year term. The second election will take place the follow year for
 the remaining seats. At that point the Steering Committee will no longer be provisional.
+
+Note that as this initial year unfolds the Steering Committee is likely to add more people, in which
+case we will update the staggered terms accordingly as well.
 
 ## Responsibilities
 
@@ -53,9 +56,18 @@ enough, and aligned enough with community hopes and needs, that people in the co
 We design governance for key parts of the IPFS ecosystem and help others establish their own 
 governance systems. We own and support the Code of Conduct.
 
+For all IPFS-related working groups, the Steering Committee can serve as arbiter of last resort
+in case the group fails to find consensus on an issue.
+
 Finally, we identify funding sources that could benefit the IPFS ecosystem and we apply for
 grants that can then be deployed to support the work of the community.
 
-## Chair
+## Members
+
+{% personCard "juan" %}
+{% personCard "mosh" %}
+{% personCard "robin" %}
+
+## Chairs
 
 {% personCard chair %}

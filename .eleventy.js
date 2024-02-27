@@ -39,11 +39,17 @@ module.exports = function (cfg) {
       .sort(sortGroupByTitle)
     ;
   });
-  cfg.addShortcode('personCard', function (id) {
-    const p = getPersonBySlug(this, id);
-    if (!p) return `<div class="person-card">Person not found: "${id}"</div>`;
-    const img = p.data.pic ? `<img src="/people/${p.data.pic}" alt="Picture of ${p.data.title}"> ` : '';
-    return `<a class="person-card" href="${p.url}">${img}${p.data.title}</a>`;
+  cfg.addShortcode('personCard', function (ids) {
+    ids = Array.isArray(ids) ? ids : [ids];
+    return ids
+      .map(id => {
+        const p = getPersonBySlug(this, id);
+        if (!p) return `<div class="person-card">Person not found: "${id}"</div>`;
+        const img = p.data.pic ? `<img src="/people/${p.data.pic}" alt="Picture of ${p.data.title}"> ` : '';
+        return `<a class="person-card" href="${p.url}">${img}${p.data.title}</a>`;
+      })
+      .join('\n')
+    ;
   });
   cfg.addShortcode('date', function () {
     return this.page.date.toISOString().replace(/T.*/, '');
