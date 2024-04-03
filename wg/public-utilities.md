@@ -13,6 +13,7 @@ tags:
 ## Meetings
 
 - Every 2 weeks
+- [File issues](https://github.com/ipshipyard/waterworks-community/issues)
 
 ## Responsibilities
 
